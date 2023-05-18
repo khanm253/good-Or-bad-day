@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Good_or_Bad
 from .serializers import GoodOrBadSerializer
-from profanity_filter import ProfanityFilter
-from django.contrib.auth.models import User
 
 class GoodOrBadAPIView(APIView):
     # 1. List all
