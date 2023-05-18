@@ -23,8 +23,14 @@ class GoodOrBadAPIView(APIView):
 
         pf = ProfanityFilter()
 
+        # data = {
+        #     "reason": pf.censor(request.data.get('reason')) if request.data.get('reason') is not None else "", 
+        #     "is_good_day": request.data.get('is_good_day'), 
+        # }
+        
+        reason = request.data.get('reason') 
         data = {
-            "reason": pf.censor(request.data.get('reason')) if request.data.get('reason') is not None else "", 
+            "reason": reason if reason is not None else "", 
             "is_good_day": request.data.get('is_good_day'), 
         }
 
