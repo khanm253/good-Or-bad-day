@@ -30,7 +30,7 @@ pytz==2022.7.1
 redis==3.5.3
 requests==2.30.0
 ruamel.yaml==0.15.100
-spacy==2.3.9
+spacy==3.5.0
 sqlparse==0.4.3
 srsly==1.0.6
 thinc==7.4.6
