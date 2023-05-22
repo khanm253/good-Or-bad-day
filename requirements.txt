@@ -37,3 +37,4 @@ typing_extensions==4.5.0
 urllib3==2.0.2
 wasabi==0.10.1
 whitenoise==6.4.0
+better-profanity==0.7.0

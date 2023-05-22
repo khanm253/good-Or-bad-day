@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Good_or_Bad
 from .serializers import GoodOrBadSerializer
+from better_profanity import profanity
 
 class GoodOrBadAPIView(APIView):
     # 1. List all
@@ -28,7 +29,7 @@ class GoodOrBadAPIView(APIView):
         
         reason = request.data.get('reason') 
         data = {
-            "reason": reason if reason is not None else "", 
+            "reason": profanity.censor(reason) if reason is not None else "", 
             "is_good_day": request.data.get('is_good_day'), 
         }
 
