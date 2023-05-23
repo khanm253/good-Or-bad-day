@@ -8,3 +8,11 @@ class Good_or_Bad(models.Model):
 
     def __str__(self):
         return "Good day" if self.is_good_day else "Bad Day"
+    
+class Result(models.Model):
+    year = models.IntegerField(blank=False, null=False)
+    good_count = models.IntegerField(default = 0, blank = True)
+    bad_count = models.IntegerField(default= 0, blank = True)
+
+    def __str__(self):
+        return self.year
